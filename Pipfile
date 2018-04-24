@@ -13,6 +13,7 @@ webtest = "*"
 [packages]
 pyramid = "==1.9.1"
 waitress = "*"
+pyramid-chameleon = "*"
 
 [requires]
 python_version = "3.6"

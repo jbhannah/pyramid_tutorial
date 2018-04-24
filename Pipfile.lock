@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "89e70672a5d127c03ebde66035698862ca600f0f0faf82df78ec526abd65ecae"
+            "sha256": "ea3f1a66af6c665082a55bf83d568711b853d2114fa5a548f174211c2b5c7d34"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,6 +16,12 @@
         ]
     },
     "default": {
+        "chameleon": {
+            "hashes": [
+                "sha256:ed2146fde4649f05c9def48de5d9e30d495e0dd7ac41448d14baf69b9cbe60dc"
+            ],
+            "version": "==3.2"
+        },
         "hupper": {
             "hashes": [
                 "sha256:3c054723ee7461d34260e2e9d99f9ae3fb106c3de3602c05f5e2eb554054ecb9",
@@ -51,6 +57,13 @@
             ],
             "index": "pypi",
             "version": "==1.9.1"
+        },
+        "pyramid-chameleon": {
+            "hashes": [
+                "sha256:d176792a50eb015d7865b44bd9b24a7bd0489fa9a5cebbd17b9e05048cef9017"
+            ],
+            "index": "pypi",
+            "version": "==0.3"
         },
         "repoze.lru": {
             "hashes": [
