@@ -6,6 +6,7 @@ name = "pypi"
 [dev-packages]
 pylint = "*"
 "autopep8" = "*"
+pyramid-debugtoolbar = "*"
 
 [packages]
 pyramid = "==1.9.1"
