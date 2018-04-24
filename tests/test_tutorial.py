@@ -1,22 +1,5 @@
 import unittest
 
-from pyramid import testing
-
-
-class TutorialViewTests(unittest.TestCase):
-    def setUp(self):
-        self.config = testing.setUp()
-
-    def tearDown(self):
-        testing.tearDown()
-
-    def test_hello_world(self):
-        from tutorial import hello_world
-
-        request = testing.DummyRequest()
-        response = hello_world(request)
-        self.assertEqual(response.status_code, 200)
-
 
 class TutorialFunctionalTests(unittest.TestCase):
     def setUp(self):
@@ -26,6 +9,10 @@ class TutorialFunctionalTests(unittest.TestCase):
         app = main({})
         self.testapp = TestApp(app)
 
-    def test_hello_world(self):
+    def test_home(self):
         res = self.testapp.get('/', status=200)
-        self.assertIn(b'<h1>Hello World!</h1>', res.body)
+        self.assertIn(b'Visit', res.body)
+
+    def test_hello(self):
+        res = self.testapp.get('/howdy', status=200)
+        self.assertIn(b'Go back', res.body)
