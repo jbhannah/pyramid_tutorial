@@ -8,6 +8,7 @@ pylint = "*"
 "autopep8" = "*"
 pyramid-debugtoolbar = "*"
 pytest = "*"
+webtest = "*"
 
 [packages]
 pyramid = "==1.9.1"
