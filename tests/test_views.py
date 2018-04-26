@@ -16,12 +16,21 @@ class TutorialViewTests(unittest.TestCase):
         request = testing.DummyRequest()
         inst = TutorialViews(request)
         response = inst.home()
-        self.assertEqual('Home View', response['name'])
+        self.assertEqual(response.status, '302 Found')
 
-    def test_hello(self):
+    def test_plain_without_name(self):
         from tutorial.views import TutorialViews
 
         request = testing.DummyRequest()
         inst = TutorialViews(request)
-        response = inst.hello()
-        self.assertEqual('Hello View', response['name'])
+        response = inst.plain()
+        self.assertIn(b'No Name Provided', response.body)
+
+    def test_plain_with_name(self):
+        from tutorial.views import TutorialViews
+
+        request = testing.DummyRequest()
+        request.GET['name'] = 'Jane Doe'
+        inst = TutorialViews(request)
+        response = inst.plain()
+        self.assertIn(b'Jane Doe', response.body)
