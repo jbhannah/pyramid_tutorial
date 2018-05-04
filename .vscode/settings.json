@@ -1,7 +1,5 @@
 {
-  "python.pythonPath": "/Users/jbhannah/.virtualenvs/pyramid_tutorial-JRUkm995/bin/python",
-  "python.unitTest.pyTestArgs": [
-    "."
-  ],
-  "python.unitTest.pyTestEnabled": true
+  "python.unitTest.pyTestArgs": ["."],
+  "python.unitTest.pyTestEnabled": true,
+  "python.pythonPath": "/Users/jhannah/.virtualenvs/pyramid_tutorial-d35xCeZk/bin/python"
 }
